@@ -1,0 +1,79 @@
+{
+  "environment": {
+    "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "cpu": 2
+  },
+  "rows": 500000,
+  "input_bytes": 17444441,
+  "warmups": 2,
+  "runs": 11,
+  "cases": [
+    {
+      "name": "text-key1",
+      "key": "key=1",
+      "parity": {
+        "sha256": "96d6cceb5097f2dc56b3b8c0dd1edb5d6f9806162977af492198b358a1049a90",
+        "bytes": 17444441
+      },
+      "rust": {
+        "median_ms": 75.664,
+        "min_ms": 74.954,
+        "p95_ms": 77.277,
+        "max_ms": 77.277
+      },
+      "goose": {
+        "median_ms": 399.439,
+        "min_ms": 397.318,
+        "p95_ms": 405.425,
+        "max_ms": 405.425
+      },
+      "rust_over_goose": 0.189,
+      "winner": "rust"
+    },
+    {
+      "name": "numeric-key2",
+      "key": "key=2n",
+      "parity": {
+        "sha256": "90785cd9736ce4fbef94299c1a823900062e5846b665a2c45e6a5bbe05da24c7",
+        "bytes": 17444441
+      },
+      "rust": {
+        "median_ms": 104.805,
+        "min_ms": 88.563,
+        "p95_ms": 107.285,
+        "max_ms": 107.285
+      },
+      "goose": {
+        "median_ms": 227.459,
+        "min_ms": 225.143,
+        "p95_ms": 230.397,
+        "max_ms": 230.397
+      },
+      "rust_over_goose": 0.461,
+      "winner": "rust"
+    },
+    {
+      "name": "composite-key1-key2",
+      "key": "key=1@2n",
+      "parity": {
+        "sha256": "2ebfee90c21e7cb67076e21ac9f6ae051e4035cb4395f50abaac9501ea007221",
+        "bytes": 17444441
+      },
+      "rust": {
+        "median_ms": 112.185,
+        "min_ms": 111.499,
+        "p95_ms": 114.158,
+        "max_ms": 114.158
+      },
+      "goose": {
+        "median_ms": 462.93,
+        "min_ms": 460.316,
+        "p95_ms": 468.255,
+        "max_ms": 468.255
+      },
+      "rust_over_goose": 0.242,
+      "winner": "rust"
+    }
+  ]
+}
